@@ -87,10 +87,8 @@ with st.sidebar:
         "Predicts an employee's expected **salary** based on their "
         "years of experience, using a trained **Linear Regression** model."
     )
-    st.divider()
     st.subheader("Input Features")
     st.markdown("- Years of Experience")
-    st.divider()
     st.subheader("Author")
     st.markdown("**Junaid Ur Rehman**")
     st.markdown("[GitHub](https://github.com/junaidrehman41)")
