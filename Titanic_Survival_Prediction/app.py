@@ -257,13 +257,22 @@ with st.sidebar:
 # ==========================================================
 # Header
 # ==========================================================
+import os
+
+# Get the folder where this script (app.py) is located
+# This ensures file paths work correctly regardless of where the app is run from
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Load the trained model using an absolute path based on this script's location
+model = joblib.load(os.path.join(BASE_DIR, "Model", "Decision_tree_model.pkl"))
+
 
 col1, col2 = st.columns([1, 5], vertical_alignment="center")
 
 with col1:
     st.image(
-        "images/titanic_banner.png",
-        width=120
+        # Load the banner image using an absolute path based on this script's location
+        os.path.join(BASE_DIR, "images", "titanic_banner.png"), width=120
     )
 
 with col2:
