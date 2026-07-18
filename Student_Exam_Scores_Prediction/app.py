@@ -1,13 +1,18 @@
 import streamlit as st
 import joblib
 import numpy as np
+import os
+
+# Get the folder where this script (app.py) is located
+# This ensures file paths work correctly regardless of where Streamlit runs the app from
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Page config (yeh sabse upar, imports ke turant baad honi chahiye)
 st.set_page_config(page_title="Exam Score Predictor", page_icon="🎓", layout="centered")
 
-# Load model & scaler
-model = joblib.load("Model/logistic_regression_model.pkl")
-scaler = joblib.load("Model/scaler.pkl")
+# Load model & scaler using absolute paths based on this script's location
+model = joblib.load(os.path.join(BASE_DIR, "Model", "logistic_regression_model.pkl"))
+scaler = joblib.load(os.path.join(BASE_DIR, "Model", "scaler.pkl"))
 
 # -----------------------------
 # Sidebar: project info + author
