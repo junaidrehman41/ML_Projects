@@ -1,4 +1,5 @@
 # Salary Prediction using Simple Linear Regression
+**Live Demo:** [https://junaidrehman41-ml-projects-salary-prediction-projectapp-05hpzb.streamlit.app/](https://junaidrehman41-ml-projects-salary-prediction-projectapp-05hpzb.streamlit.app/)
 
 ## Project Overview
 This project builds a Machine Learning model that predicts an employee's **Salary** based on their **Years of Experience**, using the **Simple Linear Regression** algorithm.
