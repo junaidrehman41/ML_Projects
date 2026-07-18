@@ -80,16 +80,36 @@ A trained classification model capable of predicting survival outcomes on unseen
 ## Exploratory Data Analysis (EDA)
 
 - **Target Variable Distribution**: `Survived` value counts — 549 passengers did not survive, 342 survived.
-- **Numerical Feature Distribution**: Histogram with KDE for `Age` and `Fare`.
+
 <p align="center">
   <img src="images/Survival Distribution.png" width="600">
 </p>
+
+- **Numerical Feature Distribution**: Histogram with KDE for `Age` and `Fare`.
+
+<p align="center">
+  <img src="images/Numerical Features Distribution.png" width="600">
+</p>
+
 - **Categorical Feature Distribution**: Count plots for `Sex`, `Pclass`, and `Embarked`.
+
 <p align="center">
   <img src="images/Categorical Features Distribution.png" width="600">
 </p>
+
 - **Skewness Analysis**: `Age` skewness calculated as approximately 0.389; `Fare` skewness calculated as approximately 4.787 (highly right-skewed).
+
+<p align="center">
+  <img src="images/Age Distribution.png" width="600">
+</p><p align="center">
+  <img src="images/Fare Distribution.png" width="600">
+</p>
+
 - **Correlation Analysis**: Correlation heatmap generated on numeric features.
+
+<p align="center">
+  <img src="images/Correlation Heatmap.png" width="600">
+</p>
 
 Boxplots, outlier treatment, and ROC-AUC analysis were not present in the notebook.
 
@@ -119,8 +139,6 @@ The following columns were removed:
 **Feature Scaling**
 Not applied. Decision Tree models do not require feature scaling.
 
-**Outlier Treatment**
-Not performed in the notebook.
 
 ---
 
@@ -155,6 +173,9 @@ A `scikit-learn` `Pipeline` containing the `DecisionTreeClassifier` was used spe
 
 **Confusion Matrix**
 Generated and visualized using a Seaborn heatmap.
+<p align="center">
+  <img src="images/Confusion Matrix.png" width="600">
+</p>
 
 **Classification Report**
 
@@ -184,6 +205,9 @@ Feature importance was computed using `model.feature_importances_` and visualize
 - **What it represents**: The relative contribution of each feature to the Decision Tree's splitting decisions and, consequently, to its predictions.
 - **Key observations**: The chart ranks all seven input features (`Pclass`, `Sex`, `Age`, `SibSp`, `Parch`, `Fare`, `Embarked`) by importance score. Exact ranking values are available in the notebook output.
 - **Why it is useful**: Helps identify which passenger attributes most strongly influence survival predictions, supporting model interpretability.
+<p align="center">
+  <img src="images/Feature Importance.png" width="600">
+</p>
 
 ---
 
@@ -194,6 +218,9 @@ Feature importance was computed using `model.feature_importances_` and visualize
 - **Confusion Matrix**: Seaborn heatmap with annotated counts.
 - **Correlation Heatmap**: Seaborn heatmap of numeric feature correlations.
 - **Distribution Plots**: Histograms with KDE for `Age` and `Fare`; count plots for `Survived`, `Sex`, `Pclass`, and `Embarked`.
+<p align="center">
+  <img src="images/Decision Tree Visualization.png" width="600">
+</p>
 
 ---
 
