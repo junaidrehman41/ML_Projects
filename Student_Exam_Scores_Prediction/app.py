@@ -9,6 +9,34 @@ st.set_page_config(page_title="Exam Score Predictor", page_icon="🎓", layout="
 model = joblib.load("Model/logistic_regression_model.pkl")
 scaler = joblib.load("Model/scaler.pkl")
 
+# -----------------------------
+# Sidebar: project info + author
+# Keeps the main page focused on the prediction form,
+# while extra context sits neatly on the side
+# -----------------------------
+with st.sidebar:
+    st.header("About This App")
+    st.write(
+        "Predicts whether a student will **Pass** or **Fail** "
+        "based on study habits and academic history, using a "
+        "trained **Logistic Regression** model."
+    )
+    st.divider()
+    st.subheader("Input Features")
+    st.markdown(
+        "- Hours Studied\n"
+        "- Sleep Hours\n"
+        "- Attendance (%)\n"
+        "- Previous Scores"
+    )
+    st.divider()
+    st.subheader("Author")
+    st.markdown("**Junaid Ur Rehman**")
+    st.markdown("[GitHub](https://github.com/junaidrehman41)")
+    st.markdown("junaidrehman41@gmail.com")
+    st.divider()
+    st.caption("Built with Streamlit & scikit-learn")
+
 # Header
 st.title("🎓 Student Exam Pass/Fail Predictor")
 st.markdown("Enter student details below to predict whether they'll **Pass** or **Fail**.")
