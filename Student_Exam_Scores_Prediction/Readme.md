@@ -1,4 +1,5 @@
 # 🎓 Student Exam Score Prediction — Logistic Regression
+**Live Demo:** [https://junaidrehman41-ml-proj-student-exam-scores-predictionapp-gh1ytt.streamlit.app/]
 
 A machine learning project that predicts whether a student will **Pass** or **Fail** an exam based on study habits and academic history, using Logistic Regression. The project covers the full pipeline — from raw data to a deployed, interactive web app.
 
